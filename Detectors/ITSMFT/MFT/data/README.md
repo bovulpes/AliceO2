@@ -1,2 +1,2 @@
-XML description of the ladders mounting positions on the disks.
+XML description of the geometry: detector halves, disks, ladders (with number of sensors).
 
