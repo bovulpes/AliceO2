@@ -65,7 +65,8 @@ class Constants : public TObject
 
   static const Double_t sWidthChip; ///< expressed in cm
 
-  static const Double_t sPrecisionPointOfClosestApproach; ///< precision (along z) for the research of the point of closest approach for a dimuon
+  static const Double_t sPrecisionPointOfClosestApproach; ///< precision (along z) for the research of the point of
+                                                          ///closest approach for a dimuon
 
   static const Double_t sZEvalKinem; // z coordinate at which the kinematics is evaluated for the ESD and AOD tracks
 

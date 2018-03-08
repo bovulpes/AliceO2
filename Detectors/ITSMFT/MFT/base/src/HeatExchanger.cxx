@@ -677,8 +677,8 @@ void HeatExchanger::createHalfDisk1(Int_t half)
   auto* t12 = new TGeoTranslation("t12", 0., -mHalfDiskGap, 0.);
   t12->RegisterYourself();
 
-  //TGeoCompositeShape *cs1 = new TGeoCompositeShape(Form("Carbon1_D1_H%d",half),
-  //Form("(carbonBase1_D1_H%d:t11)-(holeCarbon1_D1_H%d:t12)",half,half));
+  // TGeoCompositeShape *cs1 = new TGeoCompositeShape(Form("Carbon1_D1_H%d",half),
+  // Form("(carbonBase1_D1_H%d:t11)-(holeCarbon1_D1_H%d:t12)",half,half));
   auto* carbonhole1 = new TGeoSubtraction(carbonBase1, holeCarbon1, t11, t12);
   auto* ch1 = new TGeoCompositeShape(Form("Carbon1_D1_H%d", half), carbonhole1);
   auto* carbonBaseWithHole1 = new TGeoVolume(Form("carbonBaseWithHole_D1_H%d", half), ch1, mCarbon);
@@ -956,8 +956,8 @@ void HeatExchanger::createHalfDisk2(Int_t half)
   auto* t22 = new TGeoTranslation("t22", 0., -mHalfDiskGap, 0.);
   t22->RegisterYourself();
 
-  //TGeoCompositeShape *cs2 = new
-  //TGeoCompositeShape(Form("carbon2_D2_H%d",half),Form("(carbonBase2_D2_H%d:t21)-(holeCarbon2_D2_H%d:t22)",half,half));
+  // TGeoCompositeShape *cs2 = new
+  // TGeoCompositeShape(Form("carbon2_D2_H%d",half),Form("(carbonBase2_D2_H%d:t21)-(holeCarbon2_D2_H%d:t22)",half,half));
   auto* carbonhole2 = new TGeoSubtraction(carbonBase2, holeCarbon2, t21, t22);
   auto* cs2 = new TGeoCompositeShape(Form("Carbon2_D2_H%d", half), carbonhole2);
   auto* carbonBaseWithHole2 = new TGeoVolume(Form("carbonBaseWithHole_D2_H%d", half), cs2, mCarbon);
