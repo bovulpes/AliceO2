@@ -83,13 +83,13 @@ void Tracker::initialize()
             binRS = binR_proj + (iR - binhwS);
             if (binRS < 0) {
               continue;
-	    }
+            }
 
             for (Int_t iPhi = 0; iPhi < constants::index_table::LTFseed2BinWin; ++iPhi) {
               binPhiS = binPhi_proj + (iPhi - binhwS);
               if (binPhiS < 0) {
                 continue;
-	      }
+              }
 
               binIndex2S = constants::index_table::getBinIndex(binRS, binPhiS);
               mBinsS[layer1][layer2 - 1][binIndex1].emplace_back(binIndex2S);
@@ -102,14 +102,14 @@ void Tracker::initialize()
             binR = binR_proj + (iR - binhw);
             if (binR < 0) {
               continue;
-	    }
+            }
 
             for (Int_t iPhi = 0; iPhi < constants::index_table::LTFinterBinWin; ++iPhi) {
               binPhi = binPhi_proj + (iPhi - binhw);
               if (binPhi < 0) {
                 continue;
-	      }
-	      
+              }
+
               binIndex2 = constants::index_table::getBinIndex(binR, binPhi);
               mBins[layer1][layer2 - 1][binIndex1].emplace_back(binIndex2);
             }
